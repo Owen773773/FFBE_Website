@@ -40,26 +40,24 @@ function Character() {
 
     return (
         <div className={characterStyles.container}>
+            <video
+                ref={videoRef}
+                disablePictureInPicture
+                autoPlay
+                loop
+                playsInline
+                className={characterStyles.video}
+            >
+                <source src={rainVid} type="video/mp4" />
+            </video>;
+
             <img
                 src={wallpaper}
                 className={characterStyles.wallpaper}
             />
 
-            <div className={characterStyles.content}>
-                <video
-                    ref={videoRef}
-                    disablePictureInPicture
-                    autoPlay
-                    loop
-                    playsInline
-                    className={characterStyles.video}
-                >
-                    <source src={rainVid} type="video/mp4" />
-                </video>;
-
-                <div className={characterStyles.selectChar}>
-                    {chars}
-                </div>
+            <div className={characterStyles.selectChar}>
+                {chars}
             </div>
         </div>
     );
