@@ -1,0 +1,68 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.wallpaper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+}
+
+.video {
+    width: auto;
+    height: 100%;
+}
+
+.selectChar {
+    width: 75%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.selectChar > img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+}
+
+.selectChar > img:first-child { /* Rain */
+    position: absolute;
+    height: 60%;
+    z-index: 3;
+}
+
+.selectChar > img:nth-child(2) { /* Lasswell */
+    position: absolute;
+    height: 50%;
+    right: 13%;
+    bottom: 46%;
+    z-index: 2;
+}
+
+.selectChar > img:nth-child(3) { /* Fina */
+    position: absolute;
+    height: 50%;
+    right: 28%;
+    bottom: 45%;
+    z-index: 1;
+
+    transform: scaleX(-1);
+}
