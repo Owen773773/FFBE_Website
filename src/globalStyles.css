@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Runic MT Condensed";
+    src: url("./assets/font-family/runic-mt-condensed-regular-font/runicmtcondensed.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: "Runic MT Condensed";
+}
+
+.font-silver {
+    background: linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #808080 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.font-gold {
+    background: linear-gradient(
+            to bottom,
+            #fff6cc 0%,
+            #bfa23a 65%,
+            #8a8a8a 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
