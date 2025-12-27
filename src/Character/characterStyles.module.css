@@ -6,6 +6,8 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(to bottom, #1b3878 0%, #ffffff 100%);
+
+    scroll-margin-top: 50px
 }
 
 .container::before {

@@ -13,7 +13,7 @@ import lasswellImg from "../assets/img/lasswell.png"
 import finaImg from "../assets/img/fina.png"
 
 function Character() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(0);
+    const [activeIndex, setActiveIndex] = useState<number>(1);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
     const handleStart = (index: number) => {
@@ -63,7 +63,7 @@ function Character() {
     )
 
     return (
-        <div className={characterStyles.container}>
+        <div id="character-section" className={characterStyles.container}>
             <h1 className="font-gold">Main Characters</h1>
 
             <div className={characterStyles.content}>

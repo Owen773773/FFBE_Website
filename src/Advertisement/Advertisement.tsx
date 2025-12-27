@@ -84,7 +84,7 @@ function Advertisement() {
     )
 
     return(
-        <div className={advertisementStyle.container}>
+        <div id="game-section" className={advertisementStyle.container}>
             <h1 className="font-gold">A WORLD BEYOND IMAGINATION</h1>
 
             {advertising}

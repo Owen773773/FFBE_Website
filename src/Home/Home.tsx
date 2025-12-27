@@ -4,7 +4,7 @@ import wallpaper from "../assets/video/home-wallpaper.mp4"
 
 function Home() {
     return (
-        <div className={homeStyle.container}>
+        <div id="home-section" className={homeStyle.container}>
             <video disablePictureInPicture autoPlay muted loop playsInline className={homeStyle.bgVideo}>
                 <source src={wallpaper} type="video/mp4" />
             </video>

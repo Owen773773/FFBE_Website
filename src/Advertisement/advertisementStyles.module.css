@@ -6,6 +6,8 @@
     background: linear-gradient(to bottom, black 0%, #122F71 100%);
     isolation: isolate;
     z-index: 1;
+
+    scroll-margin-top: 50px
 }
 
 .container::before {
