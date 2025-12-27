@@ -3,8 +3,8 @@
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    position: relative; /* Penting agar elemen bintang tidak lari */
-    overflow: hidden;    /* Menjaga agar bintang tidak keluar dari container saat diputar */
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(to bottom, #1b3878 0%, #ffffff 100%);
 }
 
@@ -17,7 +17,7 @@
     width: 200%;
     height: 200%;
 
-    background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.4) 2px, transparent 2px);
     background-size: 150px 150px;
 
     transform: rotate(45deg);
