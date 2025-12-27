@@ -9,7 +9,7 @@
 
     position: fixed;
     box-sizing: border-box;
-    z-index: 3
+    z-index: 10
 }
 
 .navigation {

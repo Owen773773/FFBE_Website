@@ -1,47 +1,60 @@
 .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative; /* Penting agar elemen bintang tidak lari */
+    overflow: hidden;    /* Menjaga agar bintang tidak keluar dari container saat diputar */
+    background: linear-gradient(to bottom, #1b3878 0%, #ffffff 100%);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+
+    background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+    background-size: 150px 150px;
+
+    transform: rotate(45deg);
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container > h1 {
+    font-size: 70px;
+}
+
+.content {
     position: relative;
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: black;
 
     box-sizing: border-box;
     overflow: hidden;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .video {
-    position: relative;
-    z-index: 1;
+    position: absolute;
 
     width: auto;
-    height: 100%;
-}
+    height: 90%;
 
-.wallpaper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
-
-    -webkit-mask-image: linear-gradient(
-            to left,
-            black 0%,
-            rgba(0, 0, 0, 1) 77%,
-            rgba(0, 0, 0, 0) 85%
-    );
-
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    margin-left: 50px;
+    border: 2px solid rgba(191,162,58,0.4);
 }
 
 .selectChar {
     position: absolute;
-    z-index: 3;
 
     right: 0%;
     width: 75%;
@@ -58,9 +71,15 @@
     transition: transform 0.1s ease;
 }
 
+.selectChar > img:nth-child(3):hover {
+    transform: scaleX(-1) scale(1.1);
+}
+
 .selectChar > img:first-child { /* Rain */
     position: absolute;
     height: 65%;
+
+    bottom: 15%;
     z-index: 3;
 }
 
@@ -68,15 +87,15 @@
     position: absolute;
     height: 50%;
     right: 25%;
-    bottom: 41%;
+    bottom: 27%;
     z-index: 2;
 }
 
 .selectChar > img:nth-child(3) { /* Fina */
     position: absolute;
     height: 50%;
-    right: 40%;
-    bottom: 40%;
+    right: 43%;
+    bottom: 28%;
     z-index: 1;
 
     transform: scaleX(-1);
